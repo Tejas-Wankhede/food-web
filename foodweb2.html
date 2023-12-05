@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .navbar {
+      overflow: visible;
+      background-color: bisque;
+      height: 30px;
+      /* position: sticky; */
+    }
+
+    nav {
+      background-color: bisque;
+      position: fixed;
+      width: 99%;
+      height: 50px;
+      border: solid;
+    }
+
+    .dropdown {
+      float: right;
+
+    }
+    .text{font-size: x-large;}
+
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+
+
+
+
+    .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: antiquewhite;
+      min-width: 60px;
+      min-height: 30px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+
+    .dropdown-content a:hover {
+      background-color: azure
+    }
+
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+
+    .dropdown:hover .dropbtn {
+      background-color: cadetblue;
+    }
+
+    section {
+      display: flex;
+      padding-top: 45px;
+      justify-content: space-evenly;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    button {
+      color: black;
+      background-color: bisque;
+    }
+
+    h6 {
+      background-color: #4CAF50;
+      width: max-content;
+    }
+
+    .Tejas {
+      display: grid;
+      grid-template-columns: 310px 310px 310px;
+      grid-template-rows:auto;
+      grid-template-areas: "cont1 cont2"
+        "cont3";
+      grid-gap: 10px;
+      font-size: larger;
+    }
+    
+
+    .Te1,
+    .Te2,
+    .Te3 {
+      background-color: antiquewhite;
+      border:solid green;
+      border-radius: 20px;
+    }
+
+    p {
+      font-size: larger;
+      text-align: center;
+    }
+
+    .T1i,
+    .T2i,
+    .T3i {
+      padding-left: 50px;
+      padding-top: 4px;
+      
+    }
+
+
+    .wrapper {
+
+
+      display: grid;
+      grid-template-columns: 250px 250px 250px 200px;
+      grid-template-rows: 220px 220px 220px 220px;
+
+
+      grid-template-areas: "content1 content2 slidebar slidebar3"
+        "content3 content4 slidebar slidebar3"  "content5 content6 slidebar2 slidebar4""content7 content8 slidrbar2 slidebar4";
+  grid-gap: 5px;
+
+    }
+.content1 {
+      grid-area: content1;
+      height: 220px;
+      width: 250px;
+text-align: center;
+}
+
+    .content2 {
+      grid-area: content2;
+      height: 220px;
+      width: 250px;
+
+      text-align: center;
+ }
+
+    .slidebar {
+      grid-area: slidebar;
+
+      height: 445px;
+      width: 250px;
+}
+.slidebar3 {
+      grid-area: slidebar3;
+
+      height: 445px;
+      width: 195px;
+}
+.content3 {
+      grid-area: content3;
+
+      height: 220px;
+      width: 250px;
+ text-align: center;
+}
+.content4 {
+      grid-area: content4;
+height: 220px;
+      width: 250px;}
+    .content5 {
+      grid-area: content5;
+ height: 220px;
+      width: 250px;}
+    .content6 {
+      grid-area: content6;
+ height: 220px;
+      width: 250px;}
+    .content7 {
+      grid-area: content7;
+  height: 220px;
+      width: 250px; }
+    .content8 {
+      grid-area: content8;
+      height: 220px;
+      width: 250px;
+    }
+    .slidebar2{
+      grid-area: slidebar2;
+
+      height: 445px;
+      width: 250px;
+}
+.slidebar4{
+      grid-area: slidebar4;
+
+      height: 445px;
+      width: 195px;
+}
+.menu{text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+footer{display: flex; justify-content: space-evenly; background-color: antiquewhite; }
+.foot{ text-align: left; font-size:small;font-size:large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+.wrapper img {
+transition: 1s ease;
+}
+
+.wrapper img:hover {
+border-radius:50%;
+transition: 1s ease;
+}
+.bor{
+  border-radius: 10px;
+}
+.our{font-size:xx-large;}
+.textsec{font-size:xx-large;}
+.ani{animation: Tej  1s infinite ease-in-out alternate;}
+@keyframes Tej {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+@media screen and (max-width: 280px){
+  nav{width: 23%;display: flex;}
+  section{ flex-direction: column;padding-top: 50px; }
+  footer{flex-direction: column;}
+  .fft{ width: 100%;}
+  .our{width: 30%; padding-right: 15px; font-size: larger;}
+  .Tejas{display: flex;flex-direction: column; width: 200px;}
+  .bor{width: 85%;}
+  .our2{ width: 80%; padding-left: 10px;}
+  .textsec{width: 85%;}
+  .high{width: 98%;}
+  
+}
+@media screen and (max-width:800px){
+   nav{width: 23%;}
+ .bor{width: 85%;}
+  footer{flex-direction: column;}
+  .fft{ width: 100%;}
+  .our{width: 50%;}
+  .textsec{width: 85%;}
+}
+  
+
+  </style>
+</head>
+
+<body>
+  <!-- class="navbar" -->
+  <!-- //<div class="navbar"> -->
+
+    <nav>
+
+      <img class="fft" src="/images/balanced-diet.png" height="50px" width="50px">
+      <img class="foodi" src="/images/large_foodizo-01.png" height="50px" width="80px">
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </nav>
+
+ <!-- // </div> -->
+
+
+
+
+  <section>
+    <div><br>
+      <img class="bor" src="/images/ai-generated-8036273_1280.png" height="500px " width="450px">
+   
+    </div>
+    <div class="textsec">
+      <h6 class="high">60% Off on All Food Items </h6><div><img class="ani" src="/images/order4.png" height="40px" width="200px"></div> 
+      <h1>Enjoy Your <br> Delicious Meal</h1>
+      <div>
+        Directly to your doorstep</div><br>
+      <div> We make sure you can eat like <br> royalty at an affordable price.</div><br>
+      <button type="text" class="text">Explore Now</button>
+    </div>
+  </section><br>
+  <div class="Tejas">
+    <div class="Te1"> <img class="T1i" src="/images/443-4432020_food-coupons.png" height="70px" width="70px">
+      <p> <strong>Flat 40% OFF</strong><br> <br> Foodizo Big Bash - Get 40% OFF on Order of Rs 300 </p>
+    </div>
+    <div class="Te2"><img class="T2i" src="/images/delivery.png" height="70px" width="70px">
+      <p> <strong>Always on time.</strong> <br><br> Serving good food straight to your door.</p>
+    </div>
+    <div class="Te3"><img class="T3i" src="/images/fresh3.webp" height="70px" width="70px">
+      <p><strong> Delivering Fresh Food </strong><br><br> Eat a healthy meal to help <br> your body heal</p>
+    </div>
+  </div> <hr>
+  <div class="menu">
+<button class="our" >OUR MENU</button>
+<p class="our2">Explore Our Delicious Menu</p>
+</div>
+  <div class="wrapper">
+    <img class="content1" src="/images/Con1.jpg" alt="">
+    <img class="content2" src="/images/con2.jpg" alt="">
+    <img class="content3" src="/images/con4.jpg" alt="">
+    <img class="content4" src="/images/con5.jpg" alt="">
+    <img class="slidebar" src="/images/sld1.jpg" alt="">
+    <img class="content5" src="/images/con6.jpg" alt="">
+    <img class="content6" src="/images/con7.jpg" alt="">
+    <img class="content7" src="/images/con8.jpg" alt="">
+    <img class="content8" src="/images/con3.jpg" alt="">
+    <img class="slidebar2" src="/images/sld2.jpg" alt="">
+    <img class="slidebar3" src="/images/extra2.jpg" alt="">
+    <img class="slidebar4" src="/images/extra1.png" alt="">
+  </div><br><hr>
+
+<footer>
+  <div >
+    <img src="/images/balanced-diet.png" height="70px" width="70px" ><br>
+    <img src="/images/large_foodizo-01.png" height="70px" width="70px">
+  </div>
+  <div >
+    <p class="foot"> <strong> Main links</strong> <br><br> Order Tracking <br><br> New Order <br><br> Contact Us <br><br>
+    <a href="#">News & Blogs</a>
+    </p>  </div>
+    <div>
+    <p class="foot"> <strong> Support</strong><br><br>About Us <br><br> Privacy Policy <br><br>Terms & Conditions 
+    </p>
+    </div>
+    <div>
+     <p class="foot"> <strong>Feedback</strong><br><br>
+    <input type="text" placeholder="Enter Your Feedback"><br><br>
+  <strong> Follow Us </strong><br><br>
+     <img src="/images/facebook.png" height="20px" width="20px">
+     <img src="/images/instagram.png" height="20px" width="20px">
+<img src="/images/twitter.png" height="20px" width="20px">
+  </p>
+    </div>
+
+</footer>
+</body>
+
+
+</html>
